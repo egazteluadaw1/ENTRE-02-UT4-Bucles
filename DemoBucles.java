@@ -1,17 +1,20 @@
+import java.util.Random;
 /**
- *    @author - 
+ *    Elaia
  */
 public class DemoBucles
 {
     private final char ASTERISCO = '*';
     private final char ESPACIO = ' ';
-
+    
+    private Random generador;
+    
     /**
      * Constructor  
      */
     public DemoBucles()
     {
-       
+       generador = new Random();
     }
 
     /**
@@ -26,9 +29,33 @@ public class DemoBucles
      *  Usa bucles while
      */
     public int mayorPotencia2(int numero) {
+        int potencia = 0;
+        while (numero >= 1){
+            potencia = 1;
+            while (numero >= 2) {
+                potencia = 2;
+                while (numero >= 4) {
+                    potencia = 4;
+                    while (numero >= 8) {
+                        potencia = 8;
+                        while (numero >= 16) {
+                          potencia = 16;
+                          while (numero >= 32) {
+                              potencia = 32;
+                              while (numero >= 64){
+                                  potencia = 64;
+                                  while (numero >= 128) {
+                                      potencia = 128;
+                                  }
+                              }
+                          }
+                       }
+                    }
+                }
+            }
+        }
         
-        return 0;
-
+        return potencia;
     }
 
     /**
@@ -64,8 +91,10 @@ public class DemoBucles
      * 
      */
     public void generarAleatorios(int n) {
-
-       
+        
+        
+            
+        
 
     }
 
@@ -87,6 +116,7 @@ public class DemoBucles
      */
     public  void mostrarEscalera(int escalones, int alto, int ancho) {
         System.out.println();
+        
 
          
 

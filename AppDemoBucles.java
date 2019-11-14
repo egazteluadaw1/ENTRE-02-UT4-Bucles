@@ -1,6 +1,6 @@
 
 /**
- *  @author - 
+ *  Elaia
  *  
  * Incluye todo el código dentro del main()
  * No declares ningún nuevo método en esta clase ni atributos
@@ -8,7 +8,8 @@
  */
 public class AppDemoBucles
 {
-
+    private Utilidades teclado;
+    
     /**
      *  Punto de entrada a la aplicación. Dentro del main:
      *  - define y crea el teclado  
@@ -25,7 +26,8 @@ public class AppDemoBucles
      */
     public static void main(String[] args)
     {
-         
+         Utilidades.hacerPausa();
+         Utilidades.borrarPantalla();
     }
 }
 
