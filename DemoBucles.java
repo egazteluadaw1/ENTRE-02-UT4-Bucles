@@ -52,7 +52,7 @@ public class DemoBucles
             else if (numero >= 2) {
                 potencia = 2;
             }
-            else if (numero == 1) {
+            else  {
                 potencia = 1;
             }
             return potencia;
@@ -77,9 +77,15 @@ public class DemoBucles
      *  64 =    64
      */
     public void escribirSumaPotencias(int numero) {
+        int mod = 0;
+        int contador = 1;
+        System.out.printf("\n%6d =", numero);
 
-         
-
+        while(contador <= 6 && numero != mod){
+            System.out.printf("%6d",mayorPotencia2(numero - mod));
+            mod += mayorPotencia2(numero - mod);
+            contador ++;
+        }
     }
 
     /**
@@ -94,11 +100,24 @@ public class DemoBucles
      * 
      */
     public void generarAleatorios(int n) {
+        int contador = 0;
+        int aleatorio = 1;
         
-        
-            
-        
+        System.out.printf("%s", "Nºs aleatorios como suma de potencias de 2");
+        while(aleatorio != 0 && contador < n){
+            aleatorio = generador.nextInt(256);
+            escribirSumaPotencias(aleatorio);
+            contador++;
+        }
 
+        if(aleatorio == 0){
+            System.out.println("\nBucle terminado porque salió el " + aleatorio);
+        }
+
+        else{
+            System.out.println("\nBucle terminado porque se han generado " 
+                + contador + " aleatorios");
+        }
     }
 
     /**
@@ -108,7 +127,11 @@ public class DemoBucles
      */
     public void escribirCaracter(int n, char caracter)
     {
-         
+        String linea = "";
+        for (int i = 1;i<=n;i++) {
+            linea += caracter;
+        }
+        System.out.print(linea);
     }
 
     /**
