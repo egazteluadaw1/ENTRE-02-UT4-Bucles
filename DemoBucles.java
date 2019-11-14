@@ -30,29 +30,32 @@ public class DemoBucles
      */
     public int mayorPotencia2(int numero) {
         int potencia = 0;
-        while (numero >= 1){
-            potencia = 1;
-            while (numero >= 2) {
-                potencia = 2;
-                while (numero >= 4) {
-                    potencia = 4;
-                    while (numero >= 8) {
-                        potencia = 8;
-                        while (numero >= 16) {
-                          potencia = 16;
-                          while (numero >= 32) {
-                              potencia = 32;
-                              while (numero >= 64){
-                                  potencia = 64;
-                                  while (numero >= 128) {
-                                      potencia = 128;
-                                  }
-                              }
-                          }
-                       }
-                    }
-                }
+        while (numero != 0){
+            if (numero >= 128) {
+                potencia = 128;
             }
+            else if (numero >= 64) {
+                potencia = 64;
+            }
+            else if (numero >= 32) {
+                potencia = 32;
+            }
+            else if (numero >= 16) {
+                potencia = 16;
+            }
+            else if (numero >= 8) {
+                potencia = 8;
+            }
+            else if (numero >= 4) {
+                potencia = 4;
+            }
+            else if (numero >= 2) {
+                potencia = 2;
+            }
+            else if (numero == 1) {
+                potencia = 1;
+            }
+            return potencia;
         }
         
         return potencia;
